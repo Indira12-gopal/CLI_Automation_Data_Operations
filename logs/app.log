@@ -1,0 +1,6 @@
+2026-07-17 14:51:59,979 | INFO | READ command executed successfully on data/AE_MT_Purchase_Rec.csv
+2026-07-17 14:58:06,450 | INFO | READ command executed successfully on data/AE_MT_Purchase_Rec.csv
+2026-07-17 14:58:24,582 | INFO | SUMMARIZE command executed on data/AE_MT_Purchase_Rec.csv
+2026-07-17 14:58:37,959 | INFO | FILTER command | File=data/AE_MT_Purchase_Rec.csv | Column=Category | Value=Cement
+2026-07-17 14:58:46,609 | INFO | EXPORT command | data/AE_MT_Purchase_Rec.csv -> output/test.csv
+2026-07-17 21:03:38,231 | INFO | EXPORT command | data/AE_MT_Purchase_Rec.csv -> output/final_data.csv

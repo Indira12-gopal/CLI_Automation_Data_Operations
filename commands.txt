@@ -1,0 +1,186 @@
+
+CLI AUTOMATION DATA OPERATIONS
+Command Reference
+
+
+1. READ
+Purpose:
+Reads a CSV or Excel dataset and displays:
+- Dataset shape
+- Column names
+- Data types
+
+Syntax:
+python main.py read <file_path>
+
+Example:
+python main.py read data/AE_MT_Purchase_Rec.csv
+
+
+
+
+2. HEAD
+
+Purpose:
+Displays the first N rows of a dataset.
+
+Syntax:
+python main.py head <file_path> --n <number>
+
+Example:
+python main.py head data/AE_MT_Purchase_Rec.csv --n 5
+
+
+
+
+3. COLUMNS
+
+Purpose:
+Displays all column names.
+
+Syntax:
+python main.py columns <file_path>
+
+Example:
+python main.py columns data/AE_MT_Purchase_Rec.csv
+
+Show Data Types:
+
+python main.py columns data/AE_MT_Purchase_Rec.csv --show-types
+
+
+
+
+4. RENAME-COLUMNS
+
+Purpose:
+Rename an existing column.
+
+Syntax:
+python main.py rename-columns <file_path> --old <old_name> --new <new_name>
+
+Example:
+python main.py rename-columns data/AE_MT_Purchase_Rec.csv --old Supplier --new Vendor
+
+
+
+
+5. DROP-NULL
+
+Purpose:
+Removes missing values or fills them.
+
+Syntax:
+
+Remove missing values
+
+python main.py drop-null <file_path> --method drop
+
+Fill missing values
+
+python main.py drop-null <file_path> --method fill
+
+
+
+
+6. CLEAN
+
+Purpose:
+Performs automatic data cleaning.
+
+Operations:
+- Removes duplicates
+- Trims spaces
+- Fills missing values
+- Standardizes date format
+
+Syntax:
+
+python main.py clean <file_path>
+
+
+
+
+7. FILTER
+
+Purpose:
+Filters rows based on a column value.
+
+Syntax:
+
+python main.py filter <file_path> --column <column_name> --value <value>
+
+Example:
+
+python main.py filter data/AE_MT_Purchase_Rec.csv --column Category --value Cement
+
+
+
+
+8. SUMMARIZE
+
+Purpose:
+Displays dataset statistics.
+
+Includes:
+- Number of rows
+- Number of columns
+- Missing values
+- Duplicate count
+- Data types
+- Statistical summary
+
+Syntax:
+
+python main.py summarize <file_path>
+
+
+
+
+9. MERGE
+
+Purpose:
+Merges two datasets using a common key.
+
+Syntax:
+
+python main.py merge <file1> <file2> --key <column_name>
+
+Example:
+
+python main.py merge data/file1.csv data/file2.csv --key Purchase_ID
+
+
+
+
+10. EXPORT
+
+Purpose:
+Exports dataset into CSV or Excel.
+
+Syntax:
+
+python main.py export <file_path> --output <output_path>
+
+Example:
+
+python main.py export data/AE_MT_Purchase_Rec.csv --output output/final_data.csv
+
+
+
+
+LOGGING
+
+Every command is automatically recorded in:
+
+logs/app.log
+
+The log stores:
+- Command name
+- File name
+- Date & Time
+- Status
+
+===============================
+END OF COMMAND REFERENCE
+===============================
