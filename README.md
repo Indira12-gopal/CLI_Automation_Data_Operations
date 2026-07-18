@@ -166,6 +166,27 @@ The log contains:
 - Intelligent missing value suggestions
 
 ---
+## Screenshots
+
+### Read Command
+
+![Read Command](screenshots/read.png)
+
+### Clean Command
+
+![Clean Command](screenshots/clean.png)
+
+### Filter Command
+
+![Filter Command](screenshots/filter.png)
+
+### Summarize Command
+
+![Summarize Command](screenshots/summarize.png)
+
+### Export Command
+
+![Export Command](screenshots/export.png)
 
 ## Author
 
